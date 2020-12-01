@@ -15,7 +15,6 @@ body{
     display: grid;
     grid-template-columns: minmax(300px, auto);
     /* grid-template-rows: repeat(auto, minmax(auto, 600px)); */
-    row-gap: 10px;
     overflow: scroll;
 }
 
@@ -23,7 +22,69 @@ body{
     width: 100vw;
     height: 22vh;
     background-color: hsl(180, 29%, 50%);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.searchbar{
+    height: auto;
+    width: 85vw;
+    position: relative;
+    bottom: 30px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 2px 14px 28px -7px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+  border: none;
+  display: flex;
+  align-items: center;
+  height: 31px;
+  position: relative;
+  left: 8px;
+  background-color: hsl(180, 29%, 50%);
+  border-radius: 0 3px 3px 0;
+  outline: none;
+}
+
+button:hover { /*changes X icon on filtered searches*/
+    cursor: pointer;
+    background-color: hsl(180, 14%, 20%);
+}
+
+.filter.searched:hover {
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 29%, 50%);
+    cursor: default;
+}
+
+.filter.searched {
+    height: 23px;
+    padding-right: 3px;
+}
+
+#searchArea{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.clear {
+    font-weight: 700;
+    font-size: 12px;
+    color: gray;
+    margin-right: 10px;
+}
+
+.clear:hover {
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .job {
@@ -32,8 +93,8 @@ body{
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    margin: 16px 30px;
+    padding: 10px 0;
+    margin: 20px 30px;
     box-shadow: 2px 14px 28px -7px rgba(0,0,0,0.25);
 }
 
@@ -117,7 +178,7 @@ body{
     font-weight: 700;
     padding: 4px 10px;
     margin: 5px 15px 8px 0;
-    height: 33px;
+    height: 29px;
     font-size: 14px;
 }
 
