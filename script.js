@@ -1,4 +1,5 @@
 //let user choose between grid style and single line style in desktop mode
+//write conditional to say if there are no 'featured' or 'new' classes to change padding to match rest of listings
 let filter = document.querySelectorAll(".filter");
 let searchbar = document.querySelector("#searchbar");
 let header = document.querySelector(".header");
@@ -19,6 +20,7 @@ filter.forEach((filter) => {
     clear.innerHTML = "Clear";
     index = searchArea.querySelectorAll("div").length;
     clonedFilter = filter.cloneNode(true);
+    clonedFilter.classList.add("searched");
     clonedFilter.innerHTML = `${filter.innerHTML}<button id=P${index} onclick="deleteSingleFilter()"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#FFF" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"/></svg>
                 </button>`;
